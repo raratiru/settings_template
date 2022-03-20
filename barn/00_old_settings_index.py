@@ -15,6 +15,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 AUTH_USER_MODEL = "auth.User"
+BASE_DIR = PosixPath("/home/flyer/poet-hyra/src/hyra")  ###
 CACHES = {"default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"}}
 CACHE_MIDDLEWARE_ALIAS = "default"
 CACHE_MIDDLEWARE_KEY_PREFIX = ""
@@ -267,6 +268,7 @@ PASSWORD_HASHERS = [
 ]
 PASSWORD_RESET_TIMEOUT = 259200
 PREPEND_WWW = False
+ROOT_URLCONF = "main.urls"  ###
 SECRET_KEY = "django-insecure-q-mngx-dqb9l^-vh26i4ba@1r^le55k579h24rirl09$js6_i7"
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin"
