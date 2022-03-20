@@ -15,7 +15,6 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 AUTH_USER_MODEL = "auth.User"
-BASE_DIR = PosixPath("/home/flyer/poet-hyra/src/hyra")  ###
 CACHES = {"default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"}}
 CACHE_MIDDLEWARE_ALIAS = "default"
 CACHE_MIDDLEWARE_KEY_PREFIX = ""
