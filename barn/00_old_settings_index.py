@@ -294,6 +294,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_FILE_PATH = None
 SESSION_SAVE_EVERY_REQUEST = False
 SESSION_SERIALIZER = "django.contrib.sessions.serializers.JSONSerializer"
+SETTINGS_MODULE = "main.settings"  ###
 SHORT_DATETIME_FORMAT = "m/d/Y P"
 SHORT_DATE_FORMAT = "m/d/Y"
 SIGNING_BACKEND = "django.core.signing.TimestampSigner"
