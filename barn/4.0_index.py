@@ -33,7 +33,7 @@ CSRF_USE_SESSIONS = False
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": PosixPath("/home/flyer/poet-hyra/src/hyra/db.sqlite3"),
+        "NAME": PosixPath("/home/flyer/poet-set/src/set/main/db.sqlite3"),
         "ATOMIC_REQUESTS": False,
         "AUTOCOMMIT": True,
         "CONN_MAX_AGE": 0,
@@ -267,7 +267,8 @@ PASSWORD_HASHERS = [
 ]
 PASSWORD_RESET_TIMEOUT = 259200
 PREPEND_WWW = False
-SECRET_KEY = ()
+SECRET_KEY = (
+)
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin"
 SECURE_HSTS_INCLUDE_SUBDOMAINS = False
