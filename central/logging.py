@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+https://sobolevn.me/2020/03/do-not-log
+https://github.com/hynek/structlog
+"""
+
 from pathlib import Path
 
 from decouple import config

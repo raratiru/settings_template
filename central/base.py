@@ -11,6 +11,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # "django.contrib.sites",
 ]
 
 DATABASES = {
@@ -24,7 +25,4 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = "people.User"
-DEBUG = True
-SECRET_KEY = config("POET_SECRET_KEY")
 SITE_ID = 1
