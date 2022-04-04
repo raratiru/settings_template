@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from ..central.midcate import MIDDLEWARE
-from ..central.base import DATABASES
+from .central.midcate import MIDDLEWARE
+from .central.base import DATABASES
 
 
 DEBUG = True
