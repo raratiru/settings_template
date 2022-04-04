@@ -3,7 +3,7 @@
 
 import sentry_sdk
 from decouple import config
-from sentry_sdk.integrations import DjangoIntegration
+from sentry_sdk.integrations.django import DjangoIntegration
 
 
 DEBUG = False
