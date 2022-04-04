@@ -15,6 +15,5 @@ STATIC_URL = "static/"
 MEDIA_URL = "media/"
 
 STATICFILES_DIRS = [
-    Path(config("POET_DJANGO_PROJECT_PATH")) / "static",
     Path(config("POET_DJANGO_PROJECT_PATH")) / "theme" / "static",
 ]
