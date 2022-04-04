@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import sentry_sdk
+from decouple import config
+from sentry_sdk.integrations import DjangoIntegration
+
+
 DEBUG = False
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
@@ -11,6 +16,13 @@ SECURE_HSTS_SECONDS = 31536000
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_AGE = 43200
 SESSION_COOKIE_SECURE = True
+
+sentry_sdk.init(
+    dsn=config("POET_SENTRY_URL"),
+    integrations=[
+        DjangoIntegration(),
+    ],
+)
 
 # SECURE_REDIRECT_EXEMPT = [
 #     # This is required for healthcheck to work:
