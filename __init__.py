@@ -30,7 +30,6 @@ _base_settings = (
     "central/localization.py",
     "central/logging.py",
     "central/midcate.py",
-    "concord/sentry.py",
     f"habitat/{_ENV}.py",
     optional("habitat/local.py"),
 )
