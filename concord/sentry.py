@@ -3,7 +3,7 @@
 
 import sentry_sdk
 from decouple import config
-
+from sentry_sdk.integrations import DjangoIntegration
 
 sentry_login = config("POET_SENTRY_URL", default=None)
 
@@ -11,6 +11,6 @@ if sentry_login:
     sentry_sdk.init(
         dsn=sentry_login,
         integrations=[
-            sentry_sdk.integrations.DjangoIntegration(),
+            DjangoIntegration(),
         ],
     )
