@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from .central.midcate import MIDDLEWARE
-from .central.base import DATABASES
+from main.settings.central.midcate import MIDDLEWARE
+from main.settings.central.base import DATABASES, INSTALLED_APPS
 
 
 DEBUG = True
@@ -16,7 +16,11 @@ MIDDLEWARE = [
 
 def _custom_show_toolbar(request):
     """Only show the debug toolbar to users with the superuser flag."""
-    return DEBUG and request.user.is_superuser
+    user = getattr(request, "user", False)
+    if user:
+        return DEBUG and user.is_superuser
+    else:
+        return False
 
 DEBUG_TOOLBAR_CONFIG = {
     "SHOW_TOOLBAR_CALLBACK": "main.settings.habitat.development._custom_show_toolbar",
