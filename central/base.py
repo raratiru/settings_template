@@ -27,3 +27,4 @@ DATABASES = {
 }
 
 SITE_ID = 1
+ROOT_URLCONF = "main.urls"
