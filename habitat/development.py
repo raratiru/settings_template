@@ -7,6 +7,7 @@ from .central.base import DATABASES
 
 DEBUG = True
 
+INSTALLED_APPS = INSTALLED_APPS + ["debug_toolbar"]
 INTERNAL_IPS = ["127.0.0.1", "localhost"]  # Debug Toolbar
 MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
@@ -17,9 +18,8 @@ def _custom_show_toolbar(request):
     """Only show the debug toolbar to users with the superuser flag."""
     return DEBUG and request.user.is_superuser
 
-
 DEBUG_TOOLBAR_CONFIG = {
-    "SHOW_TOOLBAR_CALLBACK": "server.settings.environments.development._custom_show_toolbar",
+    "SHOW_TOOLBAR_CALLBACK": "main.settings.habitat.development._custom_show_toolbar",
 }
 
 # This will make debug toolbar to work with django-csp,
