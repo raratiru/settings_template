@@ -12,6 +12,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "people.apps.PeopleConfig",
+    "theme",
     # "django.contrib.sites",
 ]
 
