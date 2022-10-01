@@ -20,18 +20,22 @@ env_choices = {
     "Prod": "production",
 }
 _ENV = env_choices[environ["POET_ENV"]]
-
-_base_settings = (
-    "central/base.py",
-    "central/authentication.py",
-    "central/communication.py",
-    "central/csp.py",
-    "central/http.py",
-    "central/localization.py",
-    "central/logging.py",
-    "central/midcate.py",
-    f"habitat/{_ENV}.py",
-    optional("habitat/local.py"),
+_base_settings = filter(
+    None,
+    (
+        "central/base.py",
+        "central/authentication.py",
+        "central/communication.py",
+        "central/csp.py",
+        "central/http.py",
+        "central/localization.py",
+        "central/logging.py",
+        "central/midcate.py",
+        *concord_settings,
+        *gears_settings,
+        f"habitat/{_ENV}.py",
+        optional("habitat/local.py") if _ENV != "production" else None,
+    ),
 )
 
 # Include settings:
