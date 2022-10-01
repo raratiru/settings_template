@@ -5,6 +5,8 @@ from os import environ
 from pathlib import Path
 
 from decouple import config
+from main.settings.concord import concord_settings
+from main.settings.gears import gears_settings
 from split_settings.tools import include, optional
 
 
