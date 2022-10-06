@@ -20,6 +20,7 @@ environ.setdefault("POET_ENV", "Dev")
 env_choices = {
     "Dev": "development",
     "Prod": "production",
+    "Alt": "alternate",
 }
 _ENV = env_choices[environ["POET_ENV"]]
 _base_settings = filter(
