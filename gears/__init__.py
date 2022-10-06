@@ -9,4 +9,4 @@ settings_filenames = ("foo.py", "bar.py")
 """
 
 settings_filenames = ()
-gears_settings = ("gears/" + name for name in settings_filenames)
+gears_settings = ["gears/" + name for name in settings_filenames]
