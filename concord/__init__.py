@@ -9,4 +9,4 @@ settings_filenames = ("foo.py", "bar.py")
 """
 
 settings_filenames = ()
-concord_settings = ("concord/" + name for name in settings_filenames)
+concord_settings = ["concord/" + name for name in settings_filenames]
