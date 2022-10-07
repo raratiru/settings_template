@@ -3,6 +3,7 @@
 
 from main.settings.central.midcate import MIDDLEWARE
 from main.settings.central.base import DATABASES, INSTALLED_APPS
+from main.settings.central.csp import CSP_IMG_SRC, CSP_SCRIPT_SRC
 
 
 DEBUG = True
@@ -28,9 +29,8 @@ DEBUG_TOOLBAR_CONFIG = {
 
 # This will make debug toolbar to work with django-csp,
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
-CSP_SCRIPT_SRC = ("'self'", "ajax.googleapis.com")
-CSP_IMG_SRC = ("'self'", "data:")
-CSP_CONNECT_SRC = ("'self'",)
+CSP_SCRIPT_SRC = CSP_SCRIPT_SRC + ("ajax.googleapis.com",)
+CSP_IMG_SRC = CSP_IMG_SRC + ("data:",)
 
 # Disable persistent DB connections
 # https://docs.djangoproject.com/en/dev/ref/databases/#caveats
