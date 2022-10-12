@@ -18,12 +18,12 @@ INSTALLED_APPS = [
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
+        "ENGINE": config("POET_DATABASE_ENGINE", default="django.db.backends.postgresql"),
         "NAME": config("POET_DATABASE_NAME"),
         "USER": config("POET_DATABASE_USER"),
         "PASSWORD": config("POET_DATABASE_PASSWORD"),
-        "HOST": "localhost",
-        "PORT": "5432",
+        "HOST": config("POET_DATABASE_HOST", default="localhost"),
+        "PORT": config("POET_DATABASE_PORT", default="5432"),
     }
 }
 
