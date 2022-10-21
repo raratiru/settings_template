@@ -13,7 +13,7 @@ from split_settings.tools import include, optional
 AUTH_USER_MODEL = "people.User"
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DEBUG = False
-SECRET_KEY = config("POET_SECRET_KEY")
+SECRET_KEY = config("POET_DJANGO_SECRET_KEY")
 
 # Managing environment:
 environ.setdefault("POET_ENV", "Dev")
