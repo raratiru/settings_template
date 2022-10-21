@@ -18,7 +18,7 @@ SESSION_COOKIE_AGE = 43200
 SESSION_COOKIE_SECURE = True
 
 sentry_sdk.init(
-    dsn=config("POET_SENTRY_URL"),
+    dsn=config("POET_DJANGO_CLIENT_SENTRY_URL"),
     integrations=[
         DjangoIntegration(),
     ],

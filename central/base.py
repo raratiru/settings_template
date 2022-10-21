@@ -18,12 +18,12 @@ INSTALLED_APPS = [
 
 DATABASES = {
     "default": {
-        "ENGINE": config("POET_DJANGO_DATABASE_ENGINE", default="django.db.backends.postgresql"),
-        "NAME": config("POET_DJANGO_MAIN_DATABASE_NAME"),
-        "USER": config("POET_DJANGO_MAIN_DATABASE_USER"),
-        "PASSWORD": config("POET_DJANGO_MAIN_DATABASE_PASSWORD"),
-        "HOST": config("POET_DATABASE_HOST", default="localhost"),
-        "PORT": config("POET_DATABASE_PORT", default="5432"),
+        "ENGINE": config("POET_DJANGO_DATABASE_MAIN_ENGINE", default="django.db.backends.postgresql"),
+        "NAME": config("POET_DJANGO_DATABASE_MAIN_NAME"),
+        "USER": config("POET_DJANGO_DATABASE_MAIN_USER"),
+        "PASSWORD": config("POET_DJANGO_DATABASE_MAIN_PASSWORD"),
+        "HOST": config("POET_DJANGO_DATABASE_MAIN_HOST", default="localhost"),
+        "PORT": config("POET_DJANGO_DATABASE_MAIN_PORT", default="5432"),
     }
 }
 
