@@ -9,7 +9,7 @@ from decouple import config
 CACHES = {
     "default": {
         "BACKEND": "diskcache.DjangoCache",
-        "LOCATION": Path(config("POET_PROJECT_PATH")) / "www" / "cache",
+        "LOCATION": Path(config("POET_PROJECT_PATH")) / "cellar" / "cache",
         "SHARDS": 8,
         "DATABASE_TIMEOUT": 1.0,  # DiskCache transaction timeout (retry=True)
         "TIMEOUT": 12 * 60 * 60,  # 12 hours. Sessions are cached for this long.
