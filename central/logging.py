@@ -46,7 +46,7 @@ LOGGING = {
             "filters": ["require_debug_false"],
             "class": "logging.FileHandler",
             "filename": Path(config("POET_PROJECT_PATH"))
-            / "www"
+            / "cellar"
             / "logs"
             / "django.log",
             "formatter": "verbose",
