@@ -16,7 +16,7 @@ USE_I18N = True
 USE_THOUSAND_SEPARATOR = True
 USE_TZ = True
 LOCALE_PATHS = [
-    Path(config("POET_DJANGO_PROJECT_PATH")) / "patois",
+    Path(config("POET_PROJECT_DJANGO_PATH")) / "patois",
 ]
 
 # Formats
