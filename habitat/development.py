@@ -10,9 +10,9 @@ DEBUG = True
 
 INSTALLED_APPS = INSTALLED_APPS + ["debug_toolbar"]
 INTERNAL_IPS = ["127.0.0.1", "localhost"]  # Debug Toolbar
-MIDDLEWARE = [
+MIDDLEWARE = MIDDLEWARE + [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
-] + MIDDLEWARE
+]
 
 
 def _custom_show_toolbar(request):
