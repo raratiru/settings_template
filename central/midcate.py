@@ -12,7 +12,7 @@ CACHES = {
         "LOCATION": Path(config("POET_PROJECT_PATH")) / "cellar" / "cache",
         "SHARDS": 8,
         "DATABASE_TIMEOUT": 1.0,  # DiskCache transaction timeout (retry=True)
-        "TIMEOUT": 12 * 60 * 60,  # 12 hours. Sessions are cached for this long.
+        "TIMEOUT": 12 * 60 * 60,  # 12 hours == settings.SESSION_COOKIE_AGE
         "VERSION": 1,
         "OPTIONS": {
             "size_limit": 2**32,  # 4 gigabytes
