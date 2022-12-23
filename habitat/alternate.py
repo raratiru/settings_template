@@ -3,7 +3,6 @@
 
 from main.settings.central.base import DATABASES
 
-
 CORS_ALLOW_ALL_ORIGINS = True
 DEBUG = True
 

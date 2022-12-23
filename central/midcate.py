@@ -5,7 +5,6 @@ from pathlib import Path
 
 from decouple import config
 
-
 CACHES = {
     "default": {
         "BACKEND": "diskcache.DjangoCache",
@@ -37,7 +36,7 @@ MIDDLEWARE = [
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [Path(config("POET_PROJECT_DJANGO_PATH")) / "theme" / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

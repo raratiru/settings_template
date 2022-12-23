@@ -10,7 +10,6 @@ from pathlib import Path
 
 from decouple import config
 
-
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,

@@ -5,7 +5,6 @@ import sentry_sdk
 from decouple import config
 from sentry_sdk.integrations.django import DjangoIntegration
 
-
 DEBUG = False
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

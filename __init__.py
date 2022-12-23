@@ -9,7 +9,6 @@ from main.settings.concord import concord_settings
 from main.settings.gears import gears_settings
 from split_settings.tools import include, optional
 
-
 AUTH_USER_MODEL = "people.User"
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DEBUG = False

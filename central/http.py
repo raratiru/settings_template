@@ -5,7 +5,6 @@ from pathlib import Path
 
 from decouple import config
 
-
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
 STATIC_ROOT = Path(config("POET_PROJECT_PATH")) / "www" / "static"

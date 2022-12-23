@@ -3,7 +3,6 @@
 
 from decouple import config
 
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -18,7 +17,9 @@ INSTALLED_APPS = [
 
 DATABASES = {
     "default": {
-        "ENGINE": config("POET_DJANGO_DATABASE_MAIN_ENGINE", default="django.db.backends.postgresql"),
+        "ENGINE": config(
+            "POET_DJANGO_DATABASE_MAIN_ENGINE", default="django.db.backends.postgresql"
+        ),
         "NAME": config("POET_DJANGO_DATABASE_MAIN_NAME"),
         "USER": config("POET_DJANGO_DATABASE_MAIN_USER"),
         "PASSWORD": config("POET_DJANGO_DATABASE_MAIN_PASSWORD"),

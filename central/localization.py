@@ -5,7 +5,6 @@ from pathlib import Path
 
 from decouple import config
 
-
 # Languages
 
 LANGUAGES = [("en", "English"), ("el", "Greek")]

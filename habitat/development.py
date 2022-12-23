@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from main.settings.central.midcate import MIDDLEWARE
 from main.settings.central.base import DATABASES, INSTALLED_APPS
 from main.settings.central.csp import CSP_IMG_SRC, CSP_SCRIPT_SRC
-
+from main.settings.central.midcate import MIDDLEWARE
 
 DEBUG = True
 
@@ -22,6 +21,7 @@ def _custom_show_toolbar(request):
         return DEBUG and user.is_superuser
     else:
         return False
+
 
 DEBUG_TOOLBAR_CONFIG = {
     "SHOW_TOOLBAR_CALLBACK": "main.settings.habitat.development._custom_show_toolbar",
