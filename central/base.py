@@ -3,17 +3,24 @@
 
 from decouple import config
 
-INSTALLED_APPS = [
+START_APPS = (
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # "django.contrib.sites",
+)
+
+LOCAL_APPS = ()
+
+OTHER_APPS = (
     "people",
     "theme",
-    # "django.contrib.sites",
-]
+)
+
+INSTALLED_APPS = START_APPS + LOCAL_APPS + OTHER_APPS
 
 DATABASES = {
     "default": {
