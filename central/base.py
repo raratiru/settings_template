@@ -35,7 +35,5 @@ DATABASES = {
     }
 }
 
-FORMS_URLFIELD_ASSUME_HTTPS = True
-
 SITE_ID = 1
 ROOT_URLCONF = "main.urls"
