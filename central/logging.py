@@ -41,7 +41,7 @@ LOGGING = {
             "formatter": "simple",
         },
         "file": {
-            "level": "ERROR",
+            "level": config("POET_LOGGING_LEVEL", default="INFO"),
             "filters": ["require_debug_false"],
             "class": "logging.FileHandler",
             "filename": Path(config("POET_PROJECT_PATH"))
@@ -54,12 +54,12 @@ LOGGING = {
     "loggers": {
         "": {
             "handlers": ["file", "console"],
-            "level": "INFO",
+            "level": config("POET_LOGGING_LEVEL", default="INFO"),
             "propagate": True,
         },
         "django": {
             "handlers": ["file", "console"],
-            "level": "INFO",
+            "level": config("POET_LOGGING_LEVEL", default="INFO"),
             "propagate": True,
         },
     },
